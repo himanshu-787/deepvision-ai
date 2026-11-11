@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepvision"
+version = "0.1.0"
+description = "CNN training, transfer learning and fine-tuning on CIFAR-10 with PyTorch"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
