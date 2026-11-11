@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.vscode/
+
+# Data (large, reproducible by script)
+data/raw/
+data/processed/
+
+# Model weights (hosted separately later)
+artifacts/checkpoints/
+*.pth
+*.pt
+
+# Logs and experiment outputs
+logs/
+*.log
+mlruns/
+outputs/
+
+# Secrets
+.env
+
+# Notebooks
+.ipynb_checkpoints/
