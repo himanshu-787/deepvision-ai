@@ -1,0 +1,38 @@
+run_name: smoke_cnn
+seed: 42
+strategy: scratch
+data:
+  batch_size: 128
+  num_workers: 0
+  image_size: 32
+  stats: cifar
+  augment: true
+model:
+  name: improved_cnn
+  kwargs:
+    dropout: 0.3
+train:
+  epochs: 1
+  optimizer: adamw
+  lr: 0.001
+  weight_decay: 0.01
+  momentum: 0.9
+  scheduler: cosine
+  amp: false
+  grad_clip: null
+  accum_steps: 1
+  patience: null
+finetune:
+  stages:
+  - layer3
+  - layer4
+  head_epochs: 3
+  ft_epochs: 7
+  head_lr: 0.001
+  backbone_lr: 0.0001
+  lr_decay: 0.5
+  weight_decay: 0.0001
+tracking:
+  experiment_name: deepvision
+  mlflow: true
+  tensorboard: true

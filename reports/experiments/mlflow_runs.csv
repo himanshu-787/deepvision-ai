@@ -1,0 +1,3 @@
+tags.mlflow.runName,tags.strategy,tags.git_commit,metrics.best_val_acc,metrics.best_epoch,metrics.total_train_seconds,params.model.name,params.train.optimizer,params.train.lr,params.data.image_size
+smoke_cnn,scratch,8dd78b6,0.593,1.0,46.6996480999951,improved_cnn,adamw,0.001,32
+cnn_seed1,scratch,8dd78b6,0.5758,1.0,45.82617670000036,improved_cnn,adamw,0.001,32

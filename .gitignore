@@ -23,6 +23,8 @@ artifacts/checkpoints/
 logs/
 *.log
 mlruns/
+mlflow.db
+runs/
 outputs/
 
 # Secrets

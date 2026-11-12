@@ -1,0 +1,13 @@
+run_name: resnet18_head_final
+strategy: head_only
+data:
+  image_size: 64
+  stats: imagenet
+model:
+  name: resnet18
+  kwargs:
+    pretrained: true
+train:
+  epochs: 10
+  optimizer: adam
+  lr: 0.001

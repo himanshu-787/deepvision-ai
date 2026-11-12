@@ -1,0 +1,12 @@
+run_name: cnn_final
+strategy: scratch
+model:
+  name: improved_cnn
+  kwargs:
+    dropout: 0.3
+train:
+  epochs: 15
+  optimizer: adamw
+  lr: 0.001
+  weight_decay: 0.01
+  scheduler: cosine

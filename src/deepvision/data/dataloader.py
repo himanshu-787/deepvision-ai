@@ -15,15 +15,13 @@ def get_dataloaders(
     val_size: int = 5000,
     seed: int = 42,
     augment: bool = True,
+    image_size: int = 32,
+    stats: str = "cifar",
 ) -> Tuple[DataLoader, DataLoader, DataLoader]:
-    """Return (train_loader, val_loader, test_loader).
-
-    num_workers=0 is the safest on Windows. Raise it later to speed up loading,
-    but only inside `if __name__ == "__main__":` scripts.
-    """
-    train_ds, val_ds, test_ds = get_datasets(root, val_size, seed, augment)
-    pin = torch.cuda.is_available()          # faster CPU->GPU copies
-    generator = torch.Generator().manual_seed(seed)   # reproducible shuffling
+    """Return (train_loader, val_loader, test_loader)."""
+    train_ds, val_ds, test_ds = get_datasets(root, val_size, seed, augment, image_size, stats)
+    pin = torch.cuda.is_available()
+    generator = torch.Generator().manual_seed(seed)
 
     train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True,
                               num_workers=num_workers, pin_memory=pin, generator=generator)

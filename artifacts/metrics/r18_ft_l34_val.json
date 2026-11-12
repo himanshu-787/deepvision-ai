@@ -1,0 +1,109 @@
+{
+  "run_name": "r18_ft_l34",
+  "split": "val",
+  "checkpoint": "artifacts\\checkpoints\\r18_ft_l34_best.pt",
+  "checkpoint_epoch": 7,
+  "num_samples": 5000,
+  "loss": 0.34893642654418944,
+  "accuracy": 0.8812,
+  "precision_macro": 0.8806983002190132,
+  "recall_macro": 0.880470106002643,
+  "f1_macro": 0.8803606054239033,
+  "precision_weighted": 0.881416822895353,
+  "recall_weighted": 0.8812,
+  "f1_weighted": 0.8810861886439054,
+  "roc_auc_macro_ovr": 0.9923177153181107,
+  "ece": 0.022752892652343707,
+  "mean_confidence": 0.9028836482815598,
+  "total_parameters": 11181642,
+  "model_size_mb": 42.691,
+  "top_confusions": [
+    [
+      "cat",
+      "dog",
+      57
+    ],
+    [
+      "dog",
+      "cat",
+      39
+    ],
+    [
+      "cat",
+      "frog",
+      22
+    ],
+    [
+      "frog",
+      "bird",
+      22
+    ],
+    [
+      "automobile",
+      "truck",
+      21
+    ]
+  ],
+  "per_class": {
+    "airplane": {
+      "precision": 0.8733944954128441,
+      "recall": 0.8981132075471698,
+      "f1-score": 0.8855813953488372,
+      "support": 530.0
+    },
+    "automobile": {
+      "precision": 0.9298969072164949,
+      "recall": 0.9337474120082816,
+      "f1-score": 0.9318181818181818,
+      "support": 483.0
+    },
+    "bird": {
+      "precision": 0.8512396694214877,
+      "recall": 0.8619246861924686,
+      "f1-score": 0.8565488565488566,
+      "support": 478.0
+    },
+    "cat": {
+      "precision": 0.7977777777777778,
+      "recall": 0.7510460251046025,
+      "f1-score": 0.7737068965517241,
+      "support": 478.0
+    },
+    "deer": {
+      "precision": 0.8548387096774194,
+      "recall": 0.8600405679513184,
+      "f1-score": 0.8574317492416582,
+      "support": 493.0
+    },
+    "dog": {
+      "precision": 0.8103448275862069,
+      "recall": 0.8511066398390342,
+      "f1-score": 0.830225711481845,
+      "support": 497.0
+    },
+    "frog": {
+      "precision": 0.9186507936507936,
+      "recall": 0.8955512572533849,
+      "f1-score": 0.9069539666993144,
+      "support": 517.0
+    },
+    "horse": {
+      "precision": 0.9132149901380671,
+      "recall": 0.8938223938223938,
+      "f1-score": 0.9034146341463415,
+      "support": 518.0
+    },
+    "ship": {
+      "precision": 0.9453441295546559,
+      "recall": 0.913894324853229,
+      "f1-score": 0.9293532338308458,
+      "support": 511.0
+    },
+    "truck": {
+      "precision": 0.9122807017543859,
+      "recall": 0.9454545454545454,
+      "f1-score": 0.9285714285714286,
+      "support": 495.0
+    }
+  }
+}
