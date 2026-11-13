@@ -14,10 +14,11 @@ venv/
 data/raw/
 data/processed/
 
-# Model weights (hosted separately later)
+# Model weights and exports (distributed via GitHub Releases, not git)
 artifacts/checkpoints/
 *.pth
 *.pt
+*.onnx
 
 # Logs and experiment outputs
 logs/

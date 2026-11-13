@@ -4,9 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "deepvision"
-version = "0.1.0"
+version = "1.0.0"
 description = "CNN training, transfer learning and fine-tuning on CIFAR-10 with PyTorch"
 requires-python = ">=3.10"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+extend-exclude = ["learning"]
+
+[tool.ruff.lint]
+select = ["E9", "F"]        # syntax errors and pyflakes (unused imports/variables, undefined names)

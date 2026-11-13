@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    image: deepvision-api:latest
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL_PATH: /models/model.pt
+      MAX_UPLOAD_MB: "5"
+      CONF_THRESHOLD: "0.5"
+    volumes:
+      - ./artifacts/final:/models:ro     # model.pt + model_info.json, read-only
+    restart: unless-stopped

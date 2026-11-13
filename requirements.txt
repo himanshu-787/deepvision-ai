@@ -10,3 +10,10 @@ pyyaml
 pytest
 mlflow
 tensorboard
+onnx
+onnxruntime
+fastapi
+uvicorn[standard]
+python-multipart
+httpx
+ruff

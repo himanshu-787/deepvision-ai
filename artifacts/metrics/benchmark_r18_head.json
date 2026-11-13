@@ -1,0 +1,70 @@
+{
+  "run_name": "r18_head",
+  "image_size": 64,
+  "split_for_accuracy": "val",
+  "machine": {
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "cpu_count": 12,
+    "torch_threads": 6,
+    "cuda_device": null,
+    "torch": "2.15.0+cpu"
+  },
+  "onnx_check": {
+    "max_abs_diff": 1.9073486328125e-05,
+    "argmax_agreement": 1.0
+  },
+  "variants": [
+    {
+      "name": "torch_fp32_cpu",
+      "hardware": "cpu",
+      "size_mb": 42.691,
+      "val_accuracy": 0.7338,
+      "bench": [
+        {
+          "batch_size": 1,
+          "iters": 100,
+          "mean_ms": 8.459,
+          "p50_ms": 8.393,
+          "p95_ms": 9.176,
+          "p99_ms": 9.241,
+          "throughput_img_s": 118.2
+        },
+        {
+          "batch_size": 32,
+          "iters": 25,
+          "mean_ms": 64.898,
+          "p50_ms": 63.652,
+          "p95_ms": 81.024,
+          "p99_ms": 88.653,
+          "throughput_img_s": 493.1
+        }
+      ]
+    },
+    {
+      "name": "onnx_fp32_cpu",
+      "hardware": "cpu",
+      "size_mb": 42.647,
+      "val_accuracy": 0.7338,
+      "bench": [
+        {
+          "batch_size": 1,
+          "iters": 100,
+          "mean_ms": 2.632,
+          "p50_ms": 2.506,
+          "p95_ms": 3.138,
+          "p99_ms": 3.866,
+          "throughput_img_s": 379.9
+        },
+        {
+          "batch_size": 32,
+          "iters": 25,
+          "mean_ms": 34.404,
+          "p50_ms": 32.663,
+          "p95_ms": 43.523,
+          "p99_ms": 44.965,
+          "throughput_img_s": 930.1
+        }
+      ]
+    }
+  ]
+}

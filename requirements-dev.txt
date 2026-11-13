@@ -1,0 +1,8 @@
+-r requirements-api.txt
+matplotlib
+scikit-learn
+tqdm
+pyyaml
+pytest
+httpx
+ruff

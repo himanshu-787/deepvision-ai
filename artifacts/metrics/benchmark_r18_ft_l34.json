@@ -1,0 +1,96 @@
+{
+  "run_name": "r18_ft_l34",
+  "image_size": 64,
+  "split_for_accuracy": "val",
+  "machine": {
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "cpu_count": 12,
+    "torch_threads": 6,
+    "cuda_device": null,
+    "torch": "2.15.0+cpu"
+  },
+  "onnx_check": {
+    "max_abs_diff": 1.239776611328125e-05,
+    "argmax_agreement": 1.0
+  },
+  "variants": [
+    {
+      "name": "torch_fp32_cpu",
+      "hardware": "cpu",
+      "size_mb": 42.691,
+      "val_accuracy": 0.8812,
+      "bench": [
+        {
+          "batch_size": 1,
+          "iters": 100,
+          "mean_ms": 8.842,
+          "p50_ms": 8.671,
+          "p95_ms": 10.199,
+          "p99_ms": 12.023,
+          "throughput_img_s": 113.1
+        },
+        {
+          "batch_size": 32,
+          "iters": 25,
+          "mean_ms": 58.273,
+          "p50_ms": 58.341,
+          "p95_ms": 62.836,
+          "p99_ms": 63.191,
+          "throughput_img_s": 549.1
+        }
+      ]
+    },
+    {
+      "name": "onnx_fp32_cpu",
+      "hardware": "cpu",
+      "size_mb": 42.647,
+      "val_accuracy": 0.8812,
+      "bench": [
+        {
+          "batch_size": 1,
+          "iters": 100,
+          "mean_ms": 2.471,
+          "p50_ms": 2.456,
+          "p95_ms": 2.978,
+          "p99_ms": 3.264,
+          "throughput_img_s": 404.8
+        },
+        {
+          "batch_size": 32,
+          "iters": 25,
+          "mean_ms": 31.034,
+          "p50_ms": 30.622,
+          "p95_ms": 33.904,
+          "p99_ms": 35.174,
+          "throughput_img_s": 1031.1
+        }
+      ]
+    },
+    {
+      "name": "onnx_int8_cpu",
+      "hardware": "cpu",
+      "size_mb": 10.719,
+      "val_accuracy": 0.8798,
+      "bench": [
+        {
+          "batch_size": 1,
+          "iters": 100,
+          "mean_ms": 3.804,
+          "p50_ms": 3.839,
+          "p95_ms": 4.331,
+          "p99_ms": 4.481,
+          "throughput_img_s": 262.9
+        },
+        {
+          "batch_size": 32,
+          "iters": 25,
+          "mean_ms": 90.29,
+          "p50_ms": 91.664,
+          "p95_ms": 96.525,
+          "p99_ms": 97.623,
+          "throughput_img_s": 354.4
+        }
+      ]
+    }
+  ]
+}

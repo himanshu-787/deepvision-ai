@@ -1,0 +1,10 @@
+{
+  "run_name": "r18_ft_l34",
+  "selection_reason": "highest validation accuracy",
+  "validation_accuracy": 0.8812,
+  "architecture": "resnet18",
+  "image_size": 64,
+  "config_hash": null,
+  "git_commit": "0bb17f9",
+  "selected_at": "2026-11-12T17:31:16.647706+00:00"
+}
